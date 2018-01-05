@@ -99,31 +99,37 @@ Now, let's create the markdown file we want to use in our app.
 We'll name this file `example.md`, and place it in the same `src` directory as `App.js`.
 
 ```markdown
-# React Markdown Example **(h1)**
+# React Markdown Example **h1**
 
-Lorem ipsum dolor sit amet. **(p)**
+Lorem ipsum dolor sit amet. **p**
 
-[A link to the GitHub repository](https://github.com/rahrang/react-markdown-example) **(a)**
+[A link to the GitHub repository](https://github.com/rahrang/react-markdown-example)
+**a**
 
-## The First Part **(h2)**
+## The First Part **h2**
 
-Hello! Welcome to the first part. **(p)**
+Hello! Welcome to the first part. **p**
 
-### What we're doing **(h3)**
+### What we are doing **h3**
 
-We're making our react app use markdown files! **(p)**
+Making our react app use markdown files! **p**
 
-### Why we're doing it **(h3)**
+### Why we are doing it **h3**
 
-So that when we're writing a LOT of text, we can write and style quickly using markdown instead of HTML! This allows us to write several markdown files with content that we need, and then use simple logic to determine which markdown file should be fed into our markdown component! **(p)**
+So that when we writing a LOT of text, we can write and style quickly using markdown instead of HTML! This allows us to write several markdown files with content that we need, and then use simple logic to determine which markdown file should be fed into our markdown component! **p**
 
-### How we're doing it
+### How we are doing it **h3**
 
-Using the `markdown-to-jsx` component! **(p)** & **(code)**
+Using the `markdown-to-jsx` component! **p** and **code**
 
---- **(hr)**
+--- 
+**hr**
 
-ADD AN IMAGE HERE
+## The Second Part **h2**
+
+![My dog, Silky](./silky.jpg)
+
+**img**
 ```
 
 ---
@@ -303,4 +309,5 @@ And now we're done! You'll obviously want better styles than this, but this is h
 For a better example on how it's used, refer to my website. All project descriptions are written in markdown files.
 
 [My Website](http://rahrang.xyz/projects/) (Click on a project here)
-[Corresponding Code](https://github.com/rahrang/rahrang/blob/master/src/containers/Projects/ProjectPage.jsx)
+
+[Corresponding Code on GitHub](https://github.com/rahrang/rahrang/blob/master/src/containers/Projects/ProjectPage.jsx)
