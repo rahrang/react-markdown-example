@@ -11,6 +11,8 @@ const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
+const marked = require('marked');
+const renderer = new marked.Renderer();
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
@@ -187,6 +189,20 @@ module.exports = {
                 },
               },
             ],
+          }, 
+          {
+            test: /\.md$/,
+            use: [
+              {
+                loader: require.resolve('html-loader')
+              },
+              {
+                loader: require.resolve('markdown-loader'),
+                options: {
+                  renderer
+                }
+              }
+            ]        
           },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
